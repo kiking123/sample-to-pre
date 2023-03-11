@@ -502,3 +502,9 @@ $
 
 how to revert
 https://www.youtube.com/watch?v=H2DuJNWbqLw
+
+-------------------
+
+Pick Specific Files From One Branch And Add Them To Another Branch
+https://www.youtube.com/watch?v=oXZyQZ_RE5k
+

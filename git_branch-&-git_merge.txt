@@ -301,3 +301,204 @@ $ ^C
 
 
 User@DESKT
+
+-----------------------------------------------
+
+
+User@DESKTOP-VAPVGGA MINGW64 ~ (master)
+$ CD test
+bash: CD: command not found
+
+User@DESKTOP-VAPVGGA MINGW64 ~ (master)
+$ cd test
+
+User@DESKTOP-VAPVGGA MINGW64 ~/test (master)
+$ cd sample-to-pre
+bash: cd: sample-to-pre: No such file or directory
+
+User@DESKTOP-VAPVGGA MINGW64 ~/test (master)
+$ cd sample-to-pre
+bash: cd: sample-to-pre: No such file or directory
+
+User@DESKTOP-VAPVGGA MINGW64 ~/test (master)
+$ cd ..
+
+User@DESKTOP-VAPVGGA MINGW64 ~ (master)
+$ cd test
+
+User@DESKTOP-VAPVGGA MINGW64 ~/test (master)
+$ cd test
+
+User@DESKTOP-VAPVGGA MINGW64 ~/test/test (main)
+$ cd -l
+bash: cd: -l: invalid option
+cd: usage: cd [-L|[-P [-e]] [-@]] [dir]
+
+User@DESKTOP-VAPVGGA MINGW64 ~/test/test (main)
+$ cd ls
+bash: cd: ls: No such file or directory
+
+User@DESKTOP-VAPVGGA MINGW64 ~/test/test (main)
+$ cd sample-to-pre
+
+User@DESKTOP-VAPVGGA MINGW64 ~/test/test/sample-to-pre (master)
+$ git reset HEAD~1
+Unstaged changes after reset:
+M       wot.txt
+
+User@DESKTOP-VAPVGGA MINGW64 ~/test/test/sample-to-pre (master)
+$
+
+User@DESKTOP-VAPVGGA MINGW64 ~/test/test/sample-to-pre (master)
+$ git push -f origin master
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 305 bytes | 305.00 KiB/s, done.
+Total 3 (delta 1), reused 1 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/kiking123/sample-to-pre.git
+ + b38637e...ba44973 master -> master (forced update)
+
+User@DESKTOP-VAPVGGA MINGW64 ~/test/test/sample-to-pre (master)
+$ git revert HEAD
+error: Your local changes to the following files would be overwritten by merge:
+        wot.txt
+Please commit your changes or stash them before you merge.
+error: The following untracked working tree files would be overwritten by merge:
+        atc/crud.php
+        atc/index.php
+Please move or remove them before you merge.
+Aborting
+fatal: revert failed
+
+User@DESKTOP-VAPVGGA MINGW64 ~/test/test/sample-to-pre (master)
+$
+
+User@DESKTOP-VAPVGGA MINGW64 ~/test/test/sample-to-pre (master)
+$ git reset HEAD~1
+
+User@DESKTOP-VAPVGGA MINGW64 ~/test/test/sample-to-pre (master)
+
+------------------------------------------------
+------revert sample----
+
+
+User@DESKTOP-VAPVGGA MINGW64 ~ (master)
+$ cd test
+
+User@DESKTOP-VAPVGGA MINGW64 ~/test (master)
+$ cd test
+
+User@DESKTOP-VAPVGGA MINGW64 ~/test/test (main)
+$ cd sample-to-pre
+
+User@DESKTOP-VAPVGGA MINGW64 ~/test/test/sample-to-pre (master)
+$ git push origin master
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 314 bytes | 157.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/kiking123/sample-to-pre.git
+   e33c5ed..f21fa89  master -> master
+
+User@DESKTOP-VAPVGGA MINGW64 ~/test/test/sample-to-pre (master)
+$ git add git_branch-&-git_merge
+[1] 1498
+bash: -git_merge: command not found
+fatal: pathspec 'git_branch-' did not match any files
+[1]+  Exit 128                git add git_branch-
+
+User@DESKTOP-VAPVGGA MINGW64 ~/test/test/sample-to-pre (master)
+$ git add ?
+fatal: pathspec '?' did not match any files
+
+User@DESKTOP-VAPVGGA MINGW64 ~/test/test/sample-to-pre (master)
+$ git add git_branch-&-git_merge
+[1] 1509
+bash: -git_merge: command not found
+fatal: pathspec 'git_branch-' did not match any files
+[1]+  Exit 128                git add git_branch-
+
+User@DESKTOP-VAPVGGA MINGW64 ~/test/test/sample-to-pre (master)
+$ git add git_branch-&-git_merge.txt
+[1] 1515
+bash: -git_merge.txt: command not found
+fatal: pathspec 'git_branch-' did not match any files
+[1]+  Exit 128                git add git_branch-
+
+User@DESKTOP-VAPVGGA MINGW64 ~/test/test/sample-to-pre (master)
+$ git add *.txt
+
+User@DESKTOP-VAPVGGA MINGW64 ~/test/test/sample-to-pre (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   git_branch-&-git_merge.txt
+
+
+User@DESKTOP-VAPVGGA MINGW64 ~/test/test/sample-to-pre (master)
+$ git commit -m "okay, may bago"
+[master 4dc19b4] okay, may bago
+ 1 file changed, 85 insertions(+), 1 deletion(-)
+
+User@DESKTOP-VAPVGGA MINGW64 ~/test/test/sample-to-pre (master)
+$ git push origin master
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 864 bytes | 864.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/kiking123/sample-to-pre.git
+   f21fa89..4dc19b4  master -> master
+
+User@DESKTOP-VAPVGGA MINGW64 ~/test/test/sample-to-pre (master)
+$
+
+User@DESKTOP-VAPVGGA MINGW64 ~/test/test/sample-to-pre (master)
+$ git reset HEAD~1
+Unstaged changes after reset:
+M       git_branch-&-git_merge.txt
+
+User@DESKTOP-VAPVGGA MINGW64 ~/test/test/sample-to-pre (master)
+$ git push origin master
+To https://github.com/kiking123/sample-to-pre.git
+ ! [rejected]        master -> master (non-fast-forward)
+error: failed to push some refs to 'https://github.com/kiking123/sample-to-pre.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+User@DESKTOP-VAPVGGA MINGW64 ~/test/test/sample-to-pre (master)
+$ git push f origin master
+fatal: 'f' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+User@DESKTOP-VAPVGGA MINGW64 ~/test/test/sample-to-pre (master)
+$ git push -f origin master
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/kiking123/sample-to-pre.git
+ + 4dc19b4...f21fa89 master -> master (forced update)
+
+User@DESKTOP-VAPVGGA MINGW64 ~/test/test/sample-to-pre (master)
+$
+
+
+
+----------------
+
+how to revert
+https://www.youtube.com/watch?v=H2DuJNWbqLw
